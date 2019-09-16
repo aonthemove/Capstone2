@@ -1,0 +1,8 @@
+<div class="col-sm-12">
+<input style="width:78%; " [(ngModel)]="searchTerm" class="form-control" placeholder="Search Available Products and Categories">
+</div>
+<div class="col-sm-2">
+<div *ngFor= "let product of (allProduct | search: searchTerm)" class="card" style="width: 18rem;">
+    <app-product-card [product]=product></app-product-card>
+</div>
+</div>

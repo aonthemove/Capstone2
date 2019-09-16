@@ -1,0 +1,25 @@
+<h1>Order Summary</h1>
+<table class="table" *ngIf="itemsInCart.length > 0">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Sales Tax</th>
+            <th scope="col">Import Duty</th>
+            <th scope="col">Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of itemsInCart; let i = index">
+            <td>{{ item.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.price | currency }}</td>
+            <td>{{ item.tax  * (item.price * item.quantity) | currency }}</td>
+            <td>{{ item.duty  * (item.price * item.quantity) | currency }}</td>
+            <td>{{ ((item.quantity * item.price) + (item.duty   * (item.price * item.quantity)) + ( item.tax  * (item.price * item.quantity)) )| currency }}</td>
+                </tr>
+    </tbody>
+</table>
+<strong *ngIf="itemsInCart.length > 0"> Your Order Total is {{ total | currency }}</strong>
+<h5 *ngIf="itemsInCart.length == 0">{{ infoText }}</h5>

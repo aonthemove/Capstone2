@@ -1,0 +1,8 @@
+<nav class="navbar navbar-expand-lg ">
+        <div class="zoom"><a  class="logo" routerLink="/"><img src="./assets/cyberShoplogo.png"></a></div>
+    <div class="zoom"><a  class="product" routerLink="/product" routerLinkActive="link-active">Products</a></div>
+    <div class="zoom"><a  class="cart" routerLink="/cart" routerLinkActive="link-active"><img src="./assets/cart.png"></a></div>
+    <div class="zoom"><a class="admin" routerLink="/admin" routerLinkActive="link-active">Admin</a></div>
+    <button class="btn" (click)="onToggleAuthenticated()">Logged In: {{ adminService.authenticated }}</button>
+</nav>
+  

@@ -1,0 +1,19 @@
+<form [formGroup]="addProductForm" (ngSubmit)="onSubmitForm()">
+        <div class="form-group">
+            <h5>Add Product</h5>
+            <input formControlName="name" type="text" class="form-control" placeholder="Name">
+            <input formControlName="type" type="text" class="form-control" placeholder="Category">
+            <input formControlName="price" type="number" class="form-control" placeholder="Price">
+            <input formControlName="image" type="text" class="form-control" placeholder="Image">
+            <button class="btn btn-success float-right" type="submit">Submit</button>
+        </div>
+    </form>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let product of allProduct">
+            <span>{{ product.name }}</span>
+            <button class="btn btn-danger float-right" (click)="onDeleteProductItem(product)">X</button>
+            <button *ngIf="productIdBeingEdited !== product.id" class="btn btn-warning float-right" (click)="onStartEditProductItem(product)">Edit</button>
+            <button *ngIf="productIdBeingEdited == product.id" class="btn btn-primary float-right" (click)="onCancelEditProductItem()">Cancel</button>
+        </li>
+    </ul>
+    

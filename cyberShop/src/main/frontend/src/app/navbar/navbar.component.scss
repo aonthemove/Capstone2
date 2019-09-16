@@ -1,0 +1,44 @@
+.navbar{
+    background: #870000; 
+    margin-bottom: 50px;
+    z-index: 6;
+}
+    
+.cart{
+    margin-right: 50px;
+    float: right;
+}
+.cart:hover{
+ scale: 1.5;
+}
+.product{
+    color: #fff;
+    font-size: 20pt;
+    font-weight: bold;
+    margin-right: 50px;
+} 
+.logo{
+    margin-right: 100px;
+}
+.admin{
+    color: #fff;
+    font-size: 20pt;
+    font-weight: bold;
+    margin-right: 50px;
+}
+button{
+    color: white;
+}
+button:hover{
+    background-color: #fff;
+    font: #870000;
+}
+.zoom {
+    padding-bottom: 50px;
+    padding-top: 50px;
+    transition: transform .2s; /* Animation */
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
