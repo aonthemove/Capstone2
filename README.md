@@ -1,6 +1,5 @@
 # Capstone2
-- Frontend
-This project was generated with Angular CLI version 8.2.2.
+- Frontend was was generated with Angular CLI version 8.2.2.
 
 Development server
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
